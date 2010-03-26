@@ -1,0 +1,70 @@
+/*
+  N2N Edge GUI - GUI Configuration utility for n2n edge
+  Copyright (C) 2010  Ryan M. Dorn
+  https://sourceforge.net/projects/n2nedgegui/
+  $Id$
+
+  This file is part of N2N Edge GUI.
+
+  N2N Edge GUI is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  N2N Edge GUI is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with N2N Edge GUI.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#include <windows.h>
+#include "res.h"
+
+IDD_MAIN DIALOG 0, 0, 395, 170
+STYLE DS_3DLOOK | DS_CENTER | DS_MODALFRAME | DS_FIXEDSYS | WS_VISIBLE | WS_BORDER | WS_CAPTION | WS_POPUP | WS_SYSMENU
+CAPTION "N2N Edge GUI"
+FONT 8, "Ms Shell Dlg 2"
+{
+    AUTOCHECKBOX    "IP Address:", IDC_CHK_IPADDRESS, 5, 10, 53, 10
+    EDITTEXT        IDC_EDT_IPADDRESS, 85, 10, 97, 12, ES_AUTOHSCROLL
+    AUTOCHECKBOX    "Subnet mask:", IDC_CHK_SUBNETMASK, 5, 25, 59, 10
+    EDITTEXT        IDC_EDT_SUBNETMASK, 85, 25, 97, 12, ES_AUTOHSCROLL
+    LTEXT           "Community:", IDC_STATIC, 15, 40, 39, 8, SS_LEFT
+    EDITTEXT        IDC_EDT_COMMUNITY, 85, 40, 97, 12, ES_AUTOHSCROLL
+    AUTOCHECKBOX    "Encryption key:", IDC_CHK_ENCKEY, 5, 55, 66, 10
+    EDITTEXT        IDC_EDT_ENCKEY, 85, 55, 97, 12, ES_AUTOHSCROLL
+    AUTOCHECKBOX    "Key file:", IDC_CHK_KEYFILE, 5, 70, 42, 10
+    EDITTEXT        IDC_EDT_KEYFILE, 85, 70, 97, 12, ES_AUTOHSCROLL
+    LTEXT           "Supernode address:", IDC_STATIC, 15, 85, 66, 8, SS_LEFT
+    EDITTEXT        IDC_EDT_SUPERNODEADDR, 85, 85, 97, 12, ES_AUTOHSCROLL
+    LTEXT           "Supernode port:", IDC_STATIC, 15, 100, 54, 8, SS_LEFT
+    EDITTEXT        IDC_EDT_SUPERNODEPORT, 85, 100, 45, 12, ES_AUTOHSCROLL
+    AUTOCHECKBOX    "MTU:", IDC_CHK_MTU, 5, 115, 33, 10
+    EDITTEXT        IDC_EDT_MTU, 85, 115, 45, 12, ES_AUTOHSCROLL
+    AUTOCHECKBOX    "Local port:", IDC_CHK_LOCALPORT, 5, 130, 50, 10
+    EDITTEXT        IDC_EDT_LOCALPORT, 85, 130, 45, 12, ES_AUTOHSCROLL
+    AUTOCHECKBOX    "MAC address:", IDC_CHK_MACADDRESS, 5, 145, 61, 10
+    EDITTEXT        IDC_EDT_MACADDRESS, 85, 145, 97, 12, ES_AUTOHSCROLL
+    GROUPBOX        "Service control", IDC_STATIC, 190, 10, 200, 50
+    LTEXT           "Status:", IDC_STATIC, 200, 25, 24, 8, SS_LEFT
+    LTEXT           "", IDC_STC_SRV_STATUS, 230, 25, 150, 8, SS_LEFT
+    PUSHBUTTON      "Start", IDC_BTN_START, 200, 40, 50, 15
+    PUSHBUTTON      "Stop", IDC_BTN_STOP, 255, 40, 50, 15
+    LTEXT           "Current IP Address:", IDC_STATIC, 200, 70, 65, 8, SS_LEFT
+    EDITTEXT        IDC_EDT_CUR_IP, 285, 70, 97, 12, ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Current MAC Address:", IDC_STATIC, 200, 85, 73, 8, SS_LEFT
+    EDITTEXT        IDC_EDT_CUR_MAC, 285, 85, 97, 12, ES_AUTOHSCROLL | ES_READONLY
+    AUTOCHECKBOX    "Enable packet forwarding (required for DHCP)", IDC_CHK_PKTFORWARD, 200, 100, 163, 10
+    AUTOCHECKBOX    "Accept multicast MAC addresses", IDC_CHK_MULTICAST, 200, 115, 119, 10
+    AUTOCHECKBOX    "Periodically resolve supernode IP", IDC_CHK_RESOLVE, 200, 130, 121, 10
+    PUSHBUTTON      "Save Changes", IDC_BTN_SAVE, 200, 145, 60, 15
+    PUSHBUTTON      "Read Settings", IDC_BTN_READ, 265, 145, 60, 14
+    PUSHBUTTON      "Exit", IDC_BTN_EXIT, 330, 145, 60, 14
+}
+
+
+IDI_ICON32 ICON DISCARDABLE "n2n.ico"
+
